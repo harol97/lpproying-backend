@@ -1,4 +1,1 @@
-from gunicorn.app import wsgiapp
-
-wsgiapp.run()
-
+from src.wsgi import application
