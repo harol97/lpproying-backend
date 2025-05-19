@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-wjt#!g*ojbp=xp#cgb*ar+vhcrm7^*xg5z(0yr&8s**aovag9c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 JAZZMIN_SETTINGS = {
     "site_title": "LP Proying",
