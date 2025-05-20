@@ -10,3 +10,12 @@ class Company(models.Model):
 
     def __str__(self):
         return self.name.__str__()
+
+
+class ContactRequest(models.Model):
+    fullname = models.CharField(verbose_name="Nombres Completos")
+    email = models.EmailField(verbose_name="correo")
+    phone = models.CharField(max_length=20, verbose_name="telefono")
+    company=models.CharField(verbose_name="empresa")
+    subject=models.TextField(verbose_name="asunto")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="fecha de creación")

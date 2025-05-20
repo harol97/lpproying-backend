@@ -2,7 +2,9 @@ from django.db import models
 
 
 class Slide(models.Model):
+    title = models.CharField(null=True, blank=True)
     image_url = models.URLField()
+    description=models.CharField(null=True, blank=True)
     text = models.CharField(null=True, blank=True)
     href = models.URLField(null=True, blank=True)
 

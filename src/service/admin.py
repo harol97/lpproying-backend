@@ -2,13 +2,16 @@ from django.contrib import admin
 
 from utils.django.model_admin import ModelAdmin
 
-from .models import Service, ServiceFeature
+from .models import Service, Feature, Image
 
 
 class ServiceFeatureInline(admin.TabularInline):
-    model = ServiceFeature
+    model = Feature
+
+class ServiceImageInline(admin.TabularInline):
+    model= Image
 
 
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
-    inlines = (ServiceFeatureInline,)
+    inlines = (ServiceFeatureInline, ServiceImageInline)

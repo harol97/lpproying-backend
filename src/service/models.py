@@ -12,6 +12,11 @@ class Service(models.Model):
         return self.title.__str__()
 
 
-class ServiceFeature(models.Model):
+class Feature(models.Model):
     value = models.CharField()
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+
+
+class Image(models.Model):
+    image_url = models.URLField()
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
