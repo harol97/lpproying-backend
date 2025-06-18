@@ -19,4 +19,5 @@ class Feature(models.Model):
 
 class Image(models.Model):
     image_url = models.URLField()
+    description = models.CharField(null=True, blank=True)
     service = models.ForeignKey(Service, on_delete=models.CASCADE)

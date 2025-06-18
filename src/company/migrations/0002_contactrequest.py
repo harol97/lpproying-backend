@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
                 ('email', models.EmailField(max_length=254)),
                 ('phone', models.CharField(max_length=20)),
                 ('company', models.CharField()),
+                ('message', models.CharField()),
                 ('subjetc', models.TextField()),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
             ],

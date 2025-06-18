@@ -8,7 +8,7 @@ from .models import Service, Feature, Image
 class ServiceFeatureInline(admin.TabularInline):
     model = Feature
 
-class ServiceImageInline(admin.TabularInline):
+class ServiceImageInline(admin.StackedInline):
     model= Image
 
 

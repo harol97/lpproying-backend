@@ -17,5 +17,6 @@ class ContactRequest(models.Model):
     email = models.EmailField(verbose_name="correo")
     phone = models.CharField(max_length=20, verbose_name="telefono")
     company=models.CharField(verbose_name="empresa")
+    message=models.CharField(verbose_name="message")
     subject=models.TextField(verbose_name="asunto")
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="fecha de creación")
